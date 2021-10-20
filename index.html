@@ -35,13 +35,19 @@
 				grid-column: 1 / span 3; -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; }
 			#bkg { z-index: -2; position:absolute;top:0;left:0;right:0;bottom:0; }
 			#fmg { z-index: -1; position:absolute;top:0;left:0;right:0;bottom:0; background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)); }
+			@keyframes fin { 0% {opacity:0;} 100% {opacity:1;} }
+			@-moz-keyframes fin { 0% {opacity:0;} 100% {opacity:1;} }
+			@-webkit-keyframes fin { 0% {opacity:0;} 100% {opacity:1;} }
+			@-o-keyframes fin { 0% {opacity:0;} 100% {opacity:1;} }
+			@-ms-keyframes fin { 0% {opacity:0;} 100% {opacity:1;} }
+			.fi { -webkit-animation: fin 5s; -moz-animation: fin 5s; -o-animation: fin 5s; -ms-animation: fin 5s; animation: fin 5s;  }
 		</style>
 	</head>
 	<body>
 		<div id="bkg">
-			<video preload muted autoplay loop>
+			<video class="fi" preload muted autoplay loop>
 				<!-- <source src="visuals/0x031a.webm" type="video/webm" /> -->
-				<source src="/visuals/0x031a.mp4" type="video/mp4" />
+				<source src="visuals/0x031a.mp4" type="video/mp4" />
 				
 				&nbsp;
 			</video>
